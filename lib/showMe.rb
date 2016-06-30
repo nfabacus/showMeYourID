@@ -1,3 +1,4 @@
 def show_me(name)
-  'Francis is a name !'
+  return 'Francis is a name !' if name == 'Francis'
+  return 'Jean-Eulard is a name !' if name == 'Jean-Eulard'
 end

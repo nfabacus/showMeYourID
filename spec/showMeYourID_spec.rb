@@ -16,4 +16,10 @@ describe 'show_me' do
   it 'returns false when passed "Albie-"' do
     expect(show_me('Albie-')).to eq false
   end
+  it 'returns false when passed "Alb----ie"' do
+    expect(show_me('Alb----ie')).to eq false
+  end
+  it 'returns false when passed "alb--a-d-ie"' do
+    expect(show_me('Alb----ie')).to eq false
+  end
 end

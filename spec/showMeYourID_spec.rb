@@ -20,6 +20,18 @@ describe 'show_me' do
     expect(show_me('Alb----ie')).to eq false
   end
   it 'returns false when passed "alb--a-d-ie"' do
-    expect(show_me('Alb----ie')).to eq false
+    expect(show_me('Alb--a-d-ie')).to eq false
+  end
+  it 'returns false when passed "alb-Ie"' do
+    expect(show_me('alb-Ie')).to eq false
+  end
+  it 'returns false when passed "ALb-ie"' do
+    expect(show_me('ALb-ie')).to eq false
+  end
+  it 'returns false when passed "Alb-ie"' do
+    expect(show_me('Alb-ie')).to eq false
+  end
+  it 'returns true when passed "Alb-Ie"' do
+  expect(show_me('Alb-Ie')).to eq true
   end
 end
